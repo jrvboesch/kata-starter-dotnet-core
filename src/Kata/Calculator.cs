@@ -6,9 +6,9 @@ namespace Kata
     {
         public int Add(string number = "")
         {
-            if(string.IsNullOrEmpty(number))
+            if (string.IsNullOrEmpty(number))
                 return 0;
-            var numberArr = number.Split(",").Select(num => int.Parse(num)).ToArray();
+            var numberArr = number.Split(',','\n').Select(num => int.Parse(num)).ToArray();
 
             return numberArr.Sum();
         }
